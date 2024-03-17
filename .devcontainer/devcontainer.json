@@ -1,0 +1,17 @@
+{
+    "name": "myenv",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": { 
+            "VARIANT": "3.8",
+            "INSTALL_NODE": "false"
+        }
+    },
+    "runArgs": [
+        "--gpus", "all"
+    ],
+    "forwardPorts": [8501],
+    // "postCreateCommand": "conda init && conda activate myenv",
+    "remoteUser": "root"
+}

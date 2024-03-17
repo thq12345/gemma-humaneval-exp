@@ -1,0 +1,6 @@
+streamlit
+gradio
+pandas
+requests
+transformers
+torch
