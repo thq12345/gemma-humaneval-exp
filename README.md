@@ -1,11 +1,11 @@
-# Gemma V.S. HumanEval Dataset
+# Google Gemma V.S. HumanEval
 ## Motivation & Project Goals
 - How powerful is prompt engineering? Is it over-hyped?
 - How good is gemma on code generation?
 
 Project Goals:
 1. Evaluate Gemma's performance on code generation using HumanEval dataset
-2. Try to improve Gemma's performance using **PROMPT ENGINEERING ONLY.**
+2. Try to improve Gemma's coding performance using **PROMPT ENGINEERING ONLY.**
 
 ## Gemma: "Stats for nerds"
 - Decoder-Only model, context length 8192 tokens
@@ -13,7 +13,7 @@ Project Goals:
 - Trained on 2T and 6T tokens of primarily-English data from web documents, mathematics, and code
 - Outperform other latest models in 11 different metrics
 
-### Differences between 2B and 7B Variant?
+#### Differences between 2B and 7B Variant?
 - d_model: 2048 vs 3072
 - Attention Mechanisms: Multi-Query vs Multi-Head
 - Training Infrastructure: 512 vs 4096 TPUv5e Chips
@@ -22,9 +22,13 @@ Project Goals:
 ## "Instruct" Model?
 According to the Gemma Paper: 
 
-"We fine-tune Gemma 2B and 7B with supervised fine-tuning (SFT) on a mix of text-only English-only synthetic and human-generated prompt-response pairs and reinforcement learning from human feedback (RLHF) with the reward model trained on labelled English-only preference data and the policy based on a set of high-quality prompts. We find that both stages are important for improved performance on downstream automatic evaluations and human preference evaluations of model outputs."
+"We fine-tune Gemma 2B and 7B with supervised fine-tuning (SFT) on a mix of text-only English-only 
+synthetic and human-generated prompt-response pairs and reinforcement learning from human feedback (RLHF) 
+with the reward model trained on labelled English-only preference data and the policy based on a set of 
+high-quality prompts. We find that both stages are important for improved performance on downstream 
+automatic evaluations and human preference evaluations of model outputs."
 
-In other words? **Better at following instructions.**
+In other words? It's a **fine-tuned model better at following instructions.**
 
 ## HumanEval: Dataset for code generation evaluation
 - Released by OpenAI
@@ -52,7 +56,7 @@ There are 5 columns in this dataset:
 ### More about Chain-of-Thought style prompt engineering...
 - "Step-by-Step thinking"
 - Proven to be most effective against logical tasks
-- In practice: Incorporate steps to approach a logical problem into prompt
+- In practice: Incorporate steps/hints to approach a logical problem into prompt
 - Handled automatically by Gemini 1.0 Pro in this project
 
 ## Code Walkthrough
@@ -62,8 +66,8 @@ Refer to jupyter notebooks.
 We ran 4 separate experiments against:
 - Gemma 2B, raw HumanEval prompt
 - Gemma 2B, prompt-engineered HumanEval prompt
-- Gemma 2B Instruction-Tuned, raw HumanEval prompt
-- Gemma 2B Instruction-Tuned, prompt-engineered HumanEval prompt
+- Gemma 2B Instruct, raw HumanEval prompt
+- Gemma 2B Instruct, prompt-engineered HumanEval prompt
 
 #### Performance Comparison
 ![img.png](photos/img3.png)
@@ -82,7 +86,7 @@ We ran 4 separate experiments against:
    - Gemma 2B Instruct -> Gemma 2B Instruct with PE = +4.5% (29% Increase)
    - Gemma 2B base -> Gemma 2B Instruct with PE = +10.8% (117% Increase)
 
-### Conclusions
+## Conclusions
 1. Fine-Tuning works great, but **do NOT overlook** prompt engineering!
 2. Prompt engineering is a **low-cost way to improve model performance, but it works 
 better if model is already good at following instructions, or simply more advanced.**
