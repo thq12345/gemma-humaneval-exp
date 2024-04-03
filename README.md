@@ -1,4 +1,5 @@
 # Google Gemma V.S. HumanEval
+Click here for a quick 2-minute [overview](https://drive.google.com/file/d/1Bknv63WwcjpWN_Omb0tbazgEB1706qFb/view?usp=sharing).
 ## Motivation & Project Goals
 - How powerful is prompt engineering? Is it over-hyped?
 - How good is gemma on code generation?
@@ -98,11 +99,13 @@ better if model is already good at following instructions, or simply more advanc
     - Does larger model benefit more from prompt engineering?
     - Try same experiment on 7B Gemma variant.
 
+
 ## Relevant Resource/Links
 1. Gemma Paper: https://arxiv.org/abs/2403.08295
 2. Google AI Studio (Gemini): https://aistudio.google.com  
 3. HumanEval Dataset: https://huggingface.co/datasets/openai_humaneval
 4. Gemma 2B HuggingFace: https://huggingface.co/google/gemma-2b
+5. Refer to top of markdown file for a 2-minute quick overview!
 
 
 
