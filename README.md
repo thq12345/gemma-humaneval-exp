@@ -15,7 +15,6 @@ Project Goals:
 - Outperform other latest models in 11 different metrics
 
 #### Differences between 2B and 7B Variant?
-- d_model: 2048 vs 3072
 - Attention Mechanisms: Multi-Query vs Multi-Head
 - Training Infrastructure: 512 vs 4096 TPUv5e Chips
 - Training Data Tokens: 2T vs 6T
