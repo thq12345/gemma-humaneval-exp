@@ -45,7 +45,7 @@ There are 5 columns in this dataset:
 4. test: Unit tests for the solution
 5. entry_point: name of the function to be generated
 
-**Prompt, canonical_solution, entry_point are what we will focus on.**
+**Prompt, test, entry_point are what we will focus on.**
 
 ## Project Architecture
 ### Raw HumanEval Prompt Input:
